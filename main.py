@@ -21,7 +21,7 @@ def plot(dataset, bins=50):
 	ax.hist(dataset, bins, edgecolor="black", alpha=0.5)
 
 	mean = np.mean(dataset)
-	stdev = np.std(dataset)
+	stdev = (np.std(dataset))**0.5
 	entries = len(dataset)
 
 	ax.xaxis.set_major_locator(ticker.MultipleLocator(5))
